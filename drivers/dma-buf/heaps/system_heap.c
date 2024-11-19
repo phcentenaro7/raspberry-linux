@@ -54,7 +54,7 @@ static gfp_t order_flags[] = {HIGH_ORDER_GFP, HIGH_ORDER_GFP, LOW_ORDER_GFP};
 static const unsigned int orders[] = {8, 4, 0};
 #define NUM_ORDERS ARRAY_SIZE(orders)
 
-static unsigned int module_max_order = orders[0];
+static unsigned int module_max_order = 8;
 
 module_param_named(max_order, module_max_order, uint, 0400);
 MODULE_PARM_DESC(max_order, "Maximum allocation order override.");
